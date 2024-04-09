@@ -1,0 +1,17 @@
+---
+title: "Read Me / Project Paper"
+output: html_document
+date: "2024-04-09"
+---
+
+# Introduction
+
+For the final project, I am examining two data sets from data.gov. The first is related to air quality across the United States, and the other is related to mental health, looking at the number of cases of reported depression or anxiety also across the United States. I am looking to see if I can make the connection between the two data sets to see if air quality has any relation to mental health. My initial assumption would be that if an error has a higher amount of air pollution, it will have a negative effect on the population and might result in higher reported mental health incidents.
+
+### Data Cleaning
+I started by first examining both of my data sets to see what information would be relevant to my project. My first data set about air quality is very big, having 200,000 rows. The data set had several different parameters it was testing for, which also included several duplicate rows, so I started by narrowing down my search to focus on the parameter related to days in which the maximum ozone concentration was above the National Ambient Air Quality Standard.I also removed all results that had no days of bad air, but I am possibly going to undo this as I am thinking of doing a bootstrap on the data, and having those zero values could be valuable.
+
+My other data set related to mental health is not as vast at only 15,000 rows. This data is much messier; I started by adjusting the phases to follow a more uniform pattern. I also split the Time Period column, which has dates displayed by month/year this was split into a month and year column, as this will make visualization easier with fewer variables. For some reason, the data also had the United States listed as its own state for several rows; this seemed to have been done to show a subset of the population. As I decided not to delve into that subset, I removed the United States from the States column. 
+
+### Plotting
+This is where I have started to run into some trouble; while my data sets do share common columns, such as State, I am having some trouble with getting them to work well together. My current thought is to make a bootstrap of both data sets, which should work well considering the data I am working with. Because I have not gotten it working as I intended for the Shiny app, I instead played around with the template that was provided in the class and made some adjustments so that either of the two data sets can be viewed separately from each other and the variables of each can be plotted.
