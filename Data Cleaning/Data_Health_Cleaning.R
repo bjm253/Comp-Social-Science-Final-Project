@@ -26,8 +26,4 @@ health_df <- subset(health_df, select = - TimePeriod)
 #Remove "United States" from the state column
 health_df <- health_df[!grepl("(United States)", health_df$State), ]
 
-
-unique(health_df$Indicator)
-
 write.csv(health_df, "health_df_clean.csv", row.names = FALSE)
-

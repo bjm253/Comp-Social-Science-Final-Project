@@ -13,7 +13,7 @@ ui <- fluidPage(
              ),
              fluidRow(
                column(width = 6,
-                      titlePanel("Air BootStrap Graph"),
+                      titlePanel("Air Quality BootStrap Graph"),
                       plotOutput("air_bootstrap_plot")
                ),
                column(width = 6,
@@ -23,11 +23,11 @@ ui <- fluidPage(
              ),
              fluidRow(
                column(width = 6,
-                      titlePanel("Air Quality Top 10 Highest Values"),
+                      titlePanel("Average of Highested Reported Days of Poor Air Quality By State"),
                       tableOutput("top_air_states")
                ),
                column(width = 6,
-                      titlePanel("Mental Health Quality Top 10 Highest Values"),
+                      titlePanel("Incidents of Reported Mental Health Struggles (Depression, Anxiety, etc)"),
                       tableOutput("health_top_10_states")
                )
              )
